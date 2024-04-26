@@ -1,0 +1,37 @@
+[
+    {
+        "": "0",
+        "MetricsName": "RMSE",
+        "MetricsValue": "20745.77086977555"
+    },
+    {
+        "": "1",
+        "MetricsName": "MSE",
+        "MetricsValue": "430387008.9812279"
+    },
+    {
+        "": "2",
+        "MetricsName": "MAE",
+        "MetricsValue": "17289.51264688092"
+    },
+    {
+        "": "3",
+        "MetricsName": "Test Satistic",
+        "MetricsValue": "-10.914700949122691"
+    },
+    {
+        "": "4",
+        "MetricsName": "P-Value",
+        "MetricsValue": "1.0748520944545163e-19"
+    },
+    {
+        "": "5",
+        "MetricsName": "Lag",
+        "MetricsValue": "20.0"
+    },
+    {
+        "": "6",
+        "MetricsName": "Observation Used",
+        "MetricsValue": "724.0"
+    }
+]
