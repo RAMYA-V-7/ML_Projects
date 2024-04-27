@@ -1,0 +1,137 @@
+body{
+    background: linear-gradient(to left,rgb(191, 147, 219),rgb(233, 206, 234),rgb(231, 197, 255),rgb(169, 84, 200));
+  }
+  h3::after {
+      content: "Analyze the past ...";
+      animation: animate infinite 7s;
+      padding-left: 10px;
+      font-family:cursive;
+      font-weight: bold;
+      color: rgb(239, 198, 233);
+      text-align: center;
+      
+  }
+  
+  @keyframes animate {
+  
+      0% {
+          content: "Analyze the past ...";
+      }
+  
+      50% {
+          content: "Select the present...";
+      }
+  
+      75% {
+          content: "Predict the future...";
+      }
+      80% {
+          content: "Forecast visually...";
+      }
+  }
+  h1,pre,span
+  {
+  font-family:cursive;
+  font-weight: bold;
+  
+  }
+    .mat-icon
+    {
+      color: rgb(0, 8, 119);
+    }
+    .mat-toolbar-row,.mat-sidenav
+    {
+      background:linear-gradient(to right,rgb(0, 0, 0),rgb(181, 129, 201),rgb(220, 133, 254));
+    }
+  
+    h1,pre{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+    }
+    .glow {
+              
+              color: rgb(0, 0, 0);
+              text-align: center;
+              animation: glow 4s ease-in-out infinite alternate;
+            }
+            
+            @keyframes glow {
+              from {
+                  color: black;
+                text-shadow: 0 0 4px #fff, 0 0 6px #fff, 0 0 7px rgb(255, 255, 255), 0 0 4px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255), 0 0 6px rgb(213, 213, 213), 0 0 7px rgb(214, 214, 214);
+              }
+              
+              to {
+                  color: rgb(0, 0, 0);
+                text-shadow: 0 0 2px rgb(206, 148, 229), 0 0 3px rgb(236, 136, 236), 0 0 4px rgb(241, 139, 241), 0 0 5px rgb(241, 139, 241), 0 0 6px rgb(241, 139, 241), 0 0 7px rgb(241, 139, 241), 0 0 8px rgb(241, 139, 241);
+              }
+            }
+          .example-container{
+              height: 50%;
+              width: 20%;
+              text-align: left;
+          }
+          .d-flex-center{
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 100%;
+          }
+         
+          .mt-top{
+              margin-top: 30px; display: table-cell;
+              width: 490px;
+          }
+          .mt-top-2{
+              margin-top: 10px;
+             
+          }
+          .example-button-row {
+            display: table-cell;
+            width:300px;
+          }
+          
+          .example-button-row .mat-button-base {
+            margin: 6px 6px 6px 0;
+          }
+          
+          .example-flex-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+          }
+          
+          .example-button-container {
+            display: flex;
+            justify-content: center;
+            width:90px;
+          }
+          .mat-button {
+            background-color:rgb(192, 142, 222);
+            text-align: center;
+            align-items: center;
+            color: black;
+          }
+         
+          .mat-raised-button
+          {  background-color:rgb(0, 0, 0);
+            text-align: center;
+            align-items: center;
+            color: rgb(255, 255, 255);}
+          h2{
+            font-family:cursive;
+  font-weight: bold;
+          }
+          .myCard{
+    background: rgba(255,255,255,0.06);
+    box-shadow: 0 8px 32px 0 rgba(71, 81, 220, 0.37);
+    
+    border-left: 1px solid rgba(233, 233, 233, 0.3);
+    border-top: 1px solid rgba(103, 78, 78, 0.3);
+    background: linear-gradient(to left,rgb(88, 0, 85),rgb(184, 155, 188),rgb(208, 146, 216),rgb(188, 111, 214),rgb(185, 99, 209),rgb(124, 11, 162));
+            margin-top: 10vh;
+            margin-left: 65vh;
+            margin-right:65vh;
+           
+        }
+         

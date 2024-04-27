@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sales Application</title>
+    </head>
+    <body>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+              <button mat-icon-button>
+                <mat-icon class="glow">upload</mat-icon>
+              </button>
+              <h1 >File Upload</h1>
+              <span class="menu-spacer"></span>
+              
+            </mat-toolbar-row>
+          
+            <mat-toolbar-row>
+                <h3 style="font-size: 17px;">Let's</h3>
+              </mat-toolbar-row>
+          </mat-toolbar>
+          <!-- Login Mat Card -->
+          <mat-card style="text-align: center;" class="myCard">
+            <mat-card-title>
+              <h2 style="color:rgb(0, 0, 0);">File Upload</h2>
+            </mat-card-title>
+            <mat-card-content>
+                <mat-form-field floatPlaceholder="never">
+                    <input [hidden]="true" (change)="onFileSelect($event)" type="file" accept=".csv" #fileSelect>
+                    <input readonly matInput [(ngModel)]="filename"/>
+                    <button *ngIf="this.file" (click)="deleteFile(); fileSelect.value='';" matSuffix matTooltip="Remove selected file" 
+                    [matTooltipPosition]="'above'" type="button" color="warn" mat-icon-button>
+                            <a>close</a>
+                          </button>
+                    <button matSuffix  (click)="fileSelect.click();"  matTooltip="Select a file" [matTooltipPosition]="'above'">
+                      <a>Upload Your Dataset Here</a>
+                    </button></mat-form-field>
+                <br><br>
+                <mat-form-field appearance="outline">
+                    <mat-label style="color:white">Choose the choice of period to be predicted </mat-label>
+                    <mat-select [(value)]="selected" style="color:white ;" required>
+                        <mat-option value="Week" >Weekly</mat-option>
+                        <mat-option value="Month">Monthly</mat-option>
+                        <mat-option value="Year" >Yearly</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <br>
+                <mat-label style="color:white">Choose the no of period to be predicted </mat-label>
+                <mat-slider
+                color="primary"
+                thumbLabel
+                [displayWith]="formatLabel"
+                tickInterval="1"
+                step="1"
+                min="0"
+                max="1000"
+                #matslider (input)="pitch($event)"
+                required></mat-slider>
+                              
+   <b><h4 style="font-family:bodoni mt;justify-content:center;text-align:center;color:white">Period to be predicted : <u>  {{ matslider.value }}  {{selected}} </u>  from now</h4></b>
+   <br><br>
+   <button (click)="fileUpload()">Send</button>
+   <button (click)="ActVsPre()"><a>View Actual Vs Predicted Graph</a></button>
+
+            </mat-card-content>
+            </mat-card>
+            </body>
+            </html>

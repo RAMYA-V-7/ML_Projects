@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sales Application</title>
+    </head>
+    <body>
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+              <button mat-icon-button>
+                <mat-icon class="glow">home</mat-icon>
+              </button>
+              <h1 >Home</h1>
+              <span class="menu-spacer"></span>
+              
+            </mat-toolbar-row>
+          
+            <mat-toolbar-row>
+                <h3 style="font-size: 17px;">Let's</h3>
+              </mat-toolbar-row>
+          </mat-toolbar>
+          <!-- Login Mat Card -->
+          <mat-card style="text-align: center;" class="myCard">
+            <mat-card-title>
+              <h2 style="color:rgb(0, 0, 0);">Login</h2>
+            </mat-card-title>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate >
+            <mat-card-content>
+              <mat-form-field>
+                <input matInput placeholder="Email"  #box (keypress)="getName(box.value)" formControlName="email">
+                <mat-error *ngIf="!loginForm.get('email')?.errors?.required && (loginForm.get('email')?.errors?.pattern)">
+                  Please enter a valid email address
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) && loginForm.get('email')?.errors?.required">
+                  Email is required
+                </mat-error>
+              </mat-form-field><br/>
+              <mat-form-field>
+                <input matInput type="password" placeholder="Password"  #box1 (keypress)="getPass(box1.value)" formControlName="password">
+                <mat-error *ngIf="!loginForm.get('password')?.errors?.required">
+                  Enter precise password
+                </mat-error>
+                <mat-error *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) && loginForm.get('password')?.errors?.required">
+                  Password is required
+                </mat-error>
+              </mat-form-field><br/>
+              <button [disabled]="!loginForm.valid" mat-raised-button style="margin-right:5px;">
+                <mat-icon class="glow">login</mat-icon>
+              </button>
+              <button [disabled]="!loginForm.valid" mat-raised-button style="margin-right:5px;">
+                <mat-icon class="glow">exit_to_app</mat-icon>
+              </button>
+              </mat-card-content>
+             </form>
+              </mat-card>
+            <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate class="d-flex-center">
+              <div class="example-container">
+                <div>
+                  <mat-form-field>
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error *ngIf="!loginForm.get('email')?.errors?.required && (loginForm.get('email')?.errors?.pattern)">
+                      Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched) && loginForm.get('email')?.errors?.required">
+                      Email is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="mt-top-2">
+                  <mat-form-field>
+                    <input matInput type="password" placeholder="Password" formControlName="password">    
+                    <mat-error *ngIf="!loginForm.get('password')?.errors?.required">
+                      Enter precise password
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched) && loginForm.get('password')?.errors?.required">
+                      Password is required
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="example-button-row">
+                  <div class="example-flex-container">
+                    <div class="example-button-container">
+                      <button [disabled]="!loginForm.valid" mat-raised-button>
+                        <mat-icon class="glow">login</mat-icon>
+                      </button>
+                    </div>
+                    </div>
+                    </div>
+                <div class="mt-top">
+                  <button mat-fab>
+                          <mat-icon class="glow"><asl-google-signin-button *ngIf="!user"></asl-google-signin-button></mat-icon>
+                        </button></div>
+                     <div *ngIf="user">
+                     <a [routerLink]="'/plot'"></a>
+                      </div>
+              -->
+              
+      
+      
+  
+</body>
+</html>

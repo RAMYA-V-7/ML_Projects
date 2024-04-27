@@ -1,0 +1,71 @@
+h3::after {
+    content: "Analyze the past ...";
+    animation: animate infinite 7s;
+    padding-left: 10px;
+    font-family:cursive;
+    font-weight: bold;
+    color: rgb(34, 0, 184);
+    text-align: center;
+    
+}
+
+@keyframes animate {
+
+    0% {
+        content: "Analyze the past ...";
+    }
+
+    50% {
+        content: "Select the present...";
+    }
+
+    75% {
+        content: "Predict the future...";
+    }
+    80% {
+        content: "Forecast visually...";
+    }
+}
+h1,pre,span
+{
+font-family:cursive;
+font-weight: bold;
+
+}
+  .mat-icon
+  {
+    color: rgb(0, 8, 119);
+  }
+  .mat-toolbar-row,.mat-sidenav
+  {
+    background:linear-gradient(to right,rgb(0, 0, 0),rgb(67, 70, 212),rgb(95, 106, 255));
+  }
+.mat-sidenav-container
+  {
+    background: url("./z.jpg") no-repeat ;
+    background-size: cover;
+    color: rgb(255, 255, 255);
+  }
+  h1,pre{
+color: rgb(255, 255, 255);
+font-weight: bold;
+  }
+  .glow {
+            
+            color: rgb(0, 0, 0);
+            text-align: center;
+            animation: glow 4s ease-in-out infinite alternate;
+          }
+          
+          @keyframes glow {
+            from {
+                color: black;
+              text-shadow: 0 0 4px #fff, 0 0 6px #fff, 0 0 7px rgb(29, 231, 207), 0 0 4px rgb(112, 242, 246), 0 0 5px rgb(112, 242, 246), 0 0 6px rgb(112, 242, 246), 0 0 7px rgb(112, 242, 246);
+            }
+            
+            to {
+                color: antiquewhite;
+              text-shadow: 0 0 2px rgb(0, 7, 112), 0 0 3px rgb(0, 8, 119), 0 0 4px rgb(54, 0, 202), 0 0 5px rgb(50, 0, 188), 0 0 6px rgb(46, 0, 174), 0 0 7px rgb(46, 0, 174), 0 0 8px rgb(46, 0, 174);
+            }
+          }
+  
