@@ -1,5 +1,7 @@
 **Goal of the project** - In this project , we will analyze chest X-ray images and accurately identify whether the patient has pneumonia or not.
 
+**Dataset** - [Chest X Ray](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
+
 **Data Collection**
 - A large dataset of chest X-ray images is collected. This dataset should include images with and without pneumonia, with various severities.
 
@@ -13,8 +15,6 @@
 **Model Evaluation**
 - The trained CNN model is evaluated on a separate dataset of chest X-rays to assess its accuracy in pneumonia detection.
 - Metrics like accuracy, precision, recall, and F1-score are used for evaluation.
-
-**Dataset** - (https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia)
 
 
 
